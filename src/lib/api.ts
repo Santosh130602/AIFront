@@ -7,7 +7,6 @@ const API = axios.create({
   }
 });
 
-// Attach token automatically
 API.interceptors.request.use((config) => {
   if (typeof window !== "undefined") {
     const token = localStorage.getItem("token");

@@ -18,7 +18,6 @@ export default function MessageBubble({ message }: MessageBubbleProps) {
       })
     : "";
 
-  // USER
   if (message.role === "user") {
     return (
       <div className="flex items-start justify-end gap-3">
@@ -32,7 +31,6 @@ export default function MessageBubble({ message }: MessageBubbleProps) {
     );
   }
 
-  // TOOL
   if (message.role === "tool") {
     return (
       <div className="flex items-start gap-3">
@@ -59,7 +57,6 @@ export default function MessageBubble({ message }: MessageBubbleProps) {
     );
   }
 
-  // ASSISTANT
   return (
     <div className="flex items-start gap-3">
       <div
